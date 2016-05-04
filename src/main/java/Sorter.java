@@ -17,7 +17,7 @@ public abstract class Sorter {
         return array;
     }
 
-    public abstract void sorting();
+    public abstract void sort();
 
     public abstract int find(int x);
 }

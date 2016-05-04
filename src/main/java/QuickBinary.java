@@ -7,12 +7,12 @@ public class QuickBinary extends Sorter {
         super(array);
     }
 
-    public  void sorting() {
-        int[] array = this.getArray();
+    public  void sort() {
+        int[] array = getArray();
         int startIndex = 0;
         int endIndex = array.length - 1;
         doSort(startIndex, endIndex,array);
-        this.setArray(array);
+        setArray(array);
     }
 
     private  void doSort(int start, int end, int[] array) {
@@ -43,15 +43,15 @@ public class QuickBinary extends Sorter {
 
     public int find(int x) {
         int i = -1;
-        if (this.getArray() != null) {
-            int low = 0, high = this.getArray().length, mid;
+        if (getArray() != null) {
+            int low = 0, high = getArray().length, mid;
             while (low < high) {
                 mid = (low + high) >>> 1;
-                if (x == this.getArray()[mid]) {
+                if (x == getArray()[mid]) {
                     i = mid;
                     break;
                 } else {
-                    if (x < this.getArray()[mid]) {
+                    if (x < getArray()[mid]) {
                         high = mid;
                     } else {
                         low = mid + 1;
